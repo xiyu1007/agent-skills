@@ -1,0 +1,65 @@
+{
+  "skill_name": "dev-workflow",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to build a CLI tool that monitors a directory and syncs it to a remote server whenever files change. How should I start?",
+      "expected_output": "Creates README.md, doc/SPECIFICATION.md, doc/REQUIREMENTS.md, CLAUDE.md, proper directory structure with src/test/tools, config file. REQUIREMENTS.md includes test flows with timeout values.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I'm starting a new embedded project — an STM32-based temperature logger with a Python dashboard. Can you help me set things up?",
+      "expected_output": "Two-layer project structure (firmware + app), README, specification with protocol definition, requirements with test criteria and timeout estimates per module, CLAUDE.md with living doc rule and test timeout rule",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Create a new web app for managing bookmarks. I want it to have tags, search, and import from browser bookmarks.",
+      "expected_output": "README, SPECIFICATION with architecture and API design, REQUIREMENTS with test methodology, behavior rules, and test flows with explicit timeouts, proper directory layout, CLAUDE.md with doc sync and timeout rules",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "I have a half-finished React app with no documentation at all. Can you add tests for the login form?",
+      "expected_output": "Triggers dev-workflow — project lacks CLAUDE.md and docs. First creates documentation infrastructure (README, SPECIFICATION, REQUIREMENTS, CLAUDE.md), then adds test flow for login form to REQUIREMENTS.md with timeout values, then implements tests with proper cleanup",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Help me set up a new Python library for parsing PDF files and extracting tables. I want it to be well-tested from the start.",
+      "expected_output": "README, SPECIFICATION with API design, REQUIREMENTS with test-first approach and per-module timeout estimates, src/test/tools structure, CLAUDE.md with timeout and cleanup rules",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Add a user authentication module to my existing project — it should handle login, logout, and session management.",
+      "expected_output": "Updates SPECIFICATION.md with auth module architecture and timeout estimates, adds test flow to REQUIREMENTS.md FIRST with timeout values, confirms with user, THEN implements the module, runs existing tests for regression, executes test flow from REQUIREMENTS.md",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "The serial monitor test keeps hanging and never finishes. Can you help me debug it?",
+      "expected_output": "Treats hang as a timeout bug. Investigates root cause (deadlock, unreleased resource, unresponsive dependency). Adds timeout to test, adds cleanup in tearDown/finally (port close, process kill). Updates REQUIREMENTS.md bug tracker with symptom→root cause→fix. Does NOT blindly increase timeout.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "I just finished adding a data export feature and all the code is written. What should I do before committing?",
+      "expected_output": "Reviews all three docs (SPECIFICATION, REQUIREMENTS, README) per every-conversation rule. Verifies tests pass with timeouts. Checks for missing cleanup in tearDown. Verifies every subprocess call has timeout=. Updates bug tracker if any issues found.",
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "Fix the indentation error in src/parser.py line 42.",
+      "expected_output": "Should NOT trigger dev-workflow — this is a trivial one-line fix in a project that presumably already has proper documentation structure. Dev-workflow is not needed for simple typo/indentation fixes.",
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "How do I implement a binary search tree in Python? I need it for a coding interview.",
+      "expected_output": "Should NOT trigger dev-workflow — this is a pure programming knowledge question about data structures, not a project development task. No project context, no feature addition, no module to build.",
+      "files": []
+    }
+  ]
+}

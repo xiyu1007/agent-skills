@@ -1,0 +1,65 @@
+{
+  "skill_name": "dev-workflow-zh",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我想构建一个 CLI 工具，监控目录并在文件变更时同步到远程服务器。该怎么开始？",
+      "expected_output": "创建 README.md、doc/SPECIFICATION.md、doc/REQUIREMENTS.md、CLAUDE.md，建立含 src/test/tools 的目录结构、配置文件。REQUIREMENTS.md 包含带超时值的测试流程。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我要开始一个新的嵌入式项目——基于 STM32 的温度记录器，配合 Python 上位机。能帮我搭建吗？",
+      "expected_output": "双层项目结构（firmware + app），README，含协议定义的规格说明书，含测试标准和每模块超时估算的需求文档，含活文档规则和测试超时规则的 CLAUDE.md",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "创建一个新的网页应用来管理书签。需要有标签、搜索和从浏览器导入书签的功能。",
+      "expected_output": "README，含架构和 API 设计的 SPECIFICATION，含测试方法论、行为规则、带明确超时的测试流程的 REQUIREMENTS，正确的目录布局，含文档同步和超时规则的 CLAUDE.md",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "我有一个写了一半的 React 应用，完全没有文档。能帮我给登录表单加测试吗？",
+      "expected_output": "触发 dev-workflow —— 项目缺少 CLAUDE.md 和文档。首先创建文档基础设施（README、SPECIFICATION、REQUIREMENTS、CLAUDE.md），然后将登录表单的测试流程写入 REQUIREMENTS.md 并带超时值，最后实现带清理的测试",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "帮我搭建一个新的 Python 库，用于解析 PDF 文件并提取表格。我希望从一开始就有良好的测试。",
+      "expected_output": "README，含 API 设计的 SPECIFICATION，含测试优先方法论和每模块超时估算的 REQUIREMENTS，src/test/tools 结构，含超时和清理规则的 CLAUDE.md",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "给我的现有项目添加用户认证模块——需要处理登录、登出和会话管理。",
+      "expected_output": "更新 SPECIFICATION.md 添加认证模块架构和超时估算，先将带超时值的测试流程写入 REQUIREMENTS.md，与用户确认，然后才实现模块，运行已有测试进行回归检查，执行 REQUIREMENTS.md 中的测试流程",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "串口监控测试一直卡住不结束。能帮我调试吗？",
+      "expected_output": "将卡住视为超时 Bug。调查根因（死锁、未释放资源、无响应依赖）。为测试添加超时，在 tearDown/finally 中添加清理（关闭串口、杀死进程）。更新 REQUIREMENTS.md Bug 追踪表：症状→根因→修复。绝不盲目增加超时值。",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "我刚完成了一个数据导出功能的代码。提交前应该做什么？",
+      "expected_output": "按照每次对话规则审查三份文档（SPECIFICATION、REQUIREMENTS、README）。验证所有测试带超时通过。检查 tearDown 中是否有遗漏的清理。验证每个 subprocess 调用都有 timeout=。如有问题更新 Bug 追踪表。",
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "修复 src/parser.py 第 42 行的缩进错误。",
+      "expected_output": "不应触发 dev-workflow —— 这是已有正确文档结构的项目中的简单一行修复。Dev-workflow 不需要为简单的拼写/缩进修复触发。",
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "如何在 Python 中实现二叉搜索树？我需要准备编程面试。",
+      "expected_output": "不应触发 dev-workflow —— 这是关于数据结构的纯编程知识问题，不是项目开发任务。没有项目上下文，没有功能添加，没有模块构建。",
+      "files": []
+    }
+  ]
+}

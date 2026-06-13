@@ -9,15 +9,23 @@
 <a name="english"></a>
 ## English
 
-### project-init
+### dev-workflow
 
-Bootstrap new software projects with README, SPECIFICATION, REQUIREMENTS, directory structure, and CLAUDE.md. Use when starting a tool, app, library, or service from scratch.
+Software development workflow — triggers on every conversation, determines project phase, bootstraps new projects or evaluates and updates the three core docs. Enforces test timeouts with cleanup, real I/O verification, test-flow-first development, and systematic bug tracking.
+
+### dev-workflow-zh
+
+中文版本，内容与 dev-workflow 相同。
 
 ---
 
 <a name="中文"></a>
 ## 中文
 
-### project-init
+### dev-workflow
 
-初始化新软件项目，自动创建 README、SPECIFICATION、REQUIREMENTS、目录结构和 CLAUDE.md 等基础文档。适用于从零搭建工具、应用、库或服务的场景。
+软件开发工作流——每次对话触发，判断项目阶段，引导新建项目或评估并更新三份核心文档。强制执行测试超时与清理、真实 I/O 验证、测试流程优先开发、系统化 Bug 追踪。
+
+### dev-workflow-zh
+
+dev-workflow 的完整中文翻译版本。
