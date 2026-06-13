@@ -1,8 +1,5 @@
 # agent-skills
 
-**EN** · A collection of Claude Code skills for domain-specific automation in coding workflows.
-**CN** · Claude Code 技能集合，为编码工作流提供领域专用的自动化能力。
-
 ---
 
 **[English](#english) | [中文](#中文)**
