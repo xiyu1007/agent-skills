@@ -1,0 +1,35 @@
+{
+  "skill_name": "project-init",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to build a CLI tool that monitors a directory and syncs it to a remote server whenever files change. How should I start?",
+      "expected_output": "Creates README.md, doc/SPECIFICATION.md, doc/REQUIREMENTS.md, CLAUDE.md, proper directory structure with src/test/tools, config file",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I'm starting a new embedded project — an STM32-based temperature logger with a Python dashboard. Can you help me set things up?",
+      "expected_output": "Two-layer project structure (firmware + app), README, specification with protocol definition, requirements with test criteria, CLAUDE.md with living doc rule",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Create a new web app for managing bookmarks. I want it to have tags, search, and import from browser bookmarks.",
+      "expected_output": "README, SPECIFICATION with architecture and API, REQUIREMENTS with test methodology and behavior rules, proper directory layout, CLAUDE.md",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "I have a half-finished React app with no documentation at all. Can you add tests for the login form?",
+      "expected_output": "Should NOT trigger project-init — this is about adding tests to an existing project, not initializing a new one",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Help me set up a new Python library for parsing PDF files and extracting tables. I want it to be well-tested from the start.",
+      "expected_output": "README, SPECIFICATION with API design, REQUIREMENTS with test-first approach, src/test/tools structure, CLAUDE.md",
+      "files": []
+    }
+  ]
+}
